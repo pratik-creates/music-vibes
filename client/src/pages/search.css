@@ -1,0 +1,21 @@
+/* --- search.css --- */
+
+/* Placeholder Text Visibility Fix (Guaranteed White) */
+.form-control::placeholder {
+    color: #ffffff !important; /* Safed color force kiya */
+    opacity: 0.7; 
+}
+
+/* Icon Wrapper (Input Group Text) Styling */
+.input-group-text {
+    /* Input field jaisa dark background set kiya */
+    background-color: #242424 !important; 
+    border-color: #333333 !important; /* Dark Border */
+    color: #ffffff !important; /* Icon ko safed kiya */
+}
+
+/* Agar aapne search input par koi alag custom class lagayi hai to */
+.music-search-input::placeholder {
+    color: #ffffff !important;
+    opacity: 0.7;
+}

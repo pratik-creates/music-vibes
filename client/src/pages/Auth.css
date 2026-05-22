@@ -1,0 +1,99 @@
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.auth-form-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    background-color: rgba(17, 24, 39, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* MusicVibes title ka purple text */
+.purple-text {
+    color: #9333ea; /* Ye aapka main purple color hai */
+}
+
+
+.auth-title a {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white; 
+    text-decoration: none;
+}
+.auth-title a:hover {
+    color: #9333ea; /* Title link hover par purple */
+}
+
+
+.auth-subtitle {
+    color: #b3b3b3;
+}
+
+.auth-form-container .form-label {
+    color: #e5e7eb;
+}
+
+.auth-form-container .form-control {
+    background-color: #1f2937;
+    border: 1px solid #4b5563;
+    color: white; 
+    padding: 0.75rem 1rem;
+}
+
+.auth-form-container .form-control::placeholder {
+    color: #ffffff; 
+    opacity: 0.8; 
+}
+
+.auth-form-container .form-control:focus {
+    background-color: #1f2937;
+    border-color: #9333ea; /* Purple */
+    box-shadow: 0 0 0 0.25rem rgba(147, 51, 234, 0.25);
+    color: white; 
+}
+.auth-form-container .form-control:focus::placeholder {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+
+/* <--- "Back to Main Site" Link ke liye Updated CSS ---> */
+.auth-form-container .text-center.mt-4 a {
+    color: #9333ea; /* Aapke MusicVibes logo jaisa purple color */
+    text-decoration: none; /* Underline remove karne ke liye */
+    font-weight: 600; /* Thoda zyada bold */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.auth-form-container .text-center.mt-4 a:hover {
+    color: #a78bfa; /* Hover par thoda lighter purple */
+    text-decoration: underline; /* Hover par underline */
+}
+/* <--- Updated CSS YAHAN TAK HAI ---> */
+
+
+.auth-switch-text {
+    text-align: center;
+    color: #9ca3af;
+}
+
+.auth-switch-text a {
+    color: #a78bfa; /* Lighter Purple */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-switch-text a:hover {
+    text-decoration: underline;
+}
