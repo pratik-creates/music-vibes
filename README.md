@@ -41,16 +41,16 @@ Pratik Creates
 ## 📸 Screenshots
 
 ###  Home Preview
-![Home](./screenshots/home-preview.png)
+![Home](./screenshot/home-preview.png)
 
 ###  Search Section
-![Search](./screenshots/search-section.png)
+![Search](./screenshot/search-section.png)
 
 ###  Upload Section
-![Upload](./screenshots/upload-section.png)
+![Upload](./screenshot/upload-section.png)
 
 ###  Responsive Section
-![Responsive](./screenshots/responsives-section.png)
+![Responsive](./screenshot/responsives-section.png)
 
 ---
 
