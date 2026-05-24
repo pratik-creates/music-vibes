@@ -1,0 +1,170 @@
+/* src/components/admin/AdminSidebar/AdminSidebar.css */
+
+/* ===== HAMBURGER BUTTON (mobile only) ===== */
+.admin-sidebar-hamburger {
+    display: none;
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1100;
+    background-color: #121212;
+    border: none;
+    color: #ffffff;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ===== OVERLAY (mobile only) ===== */
+.admin-sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+/* ===== CLOSE BUTTON inside sidebar (mobile only) ===== */
+.admin-sidebar-close-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 0.25rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+/* ===== ADMIN SIDEBAR BASE ===== */
+.admin-sidebar {
+    width: 280px;
+    min-width: 280px;
+    height: 100vh;
+    background-color: #121212;
+    color: #b3b3b3;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    z-index: 1050;
+    box-sizing: border-box;
+}
+
+.admin-sidebar .sidebar-logo {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.admin-badge {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+.admin-sidebar .sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.admin-sidebar .sidebar-nav .nav-link {
+    color: #b3b3b3;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.admin-sidebar .sidebar-nav .nav-link:hover {
+    color: white;
+    background-color: #282828;
+}
+
+.admin-sidebar .sidebar-nav .nav-link.active {
+    color: white;
+    background-color: #a855f7;
+    font-weight: 600;
+}
+
+.admin-sidebar .sidebar-nav .nav-link.active svg {
+    color: white;
+}
+
+.admin-sidebar .btn-logout {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    width: 100%;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.admin-sidebar .btn-logout:hover {
+    color: white;
+    background-color: #dc3545;
+}
+
+.admin-sidebar .nav-link svg,
+.admin-sidebar .btn-logout svg {
+    margin-right: 10px;
+    color: #b3b3b3;
+    transition: all 0.2s ease-in-out;
+}
+
+.admin-sidebar .nav-link:hover svg {
+    color: white;
+}
+
+.admin-sidebar .nav-link.active svg {
+    color: white;
+}
+
+/* ===== RESPONSIVE: TABLET & MOBILE (≤ 991px) ===== */
+@media (max-width: 991px) {
+    .admin-sidebar-hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .admin-sidebar-overlay {
+        display: block;
+    }
+
+    .admin-sidebar-close-btn {
+        display: flex;
+    }
+
+    /* On mobile, admin sidebar is fixed and slides in */
+    .admin-sidebar {
+        position: fixed;
+        transform: translateX(-100%);
+        z-index: 1060;
+        width: 260px;
+        min-width: 260px;
+    }
+
+    .admin-sidebar.admin-sidebar-open {
+        transform: translateX(0);
+    }
+}

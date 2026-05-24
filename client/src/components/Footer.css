@@ -1,0 +1,41 @@
+/* Footer.css */
+
+.app-footer {
+    background-color: #000;
+    border-top: 1px solid var(--background-card);
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.purple-text {
+    color: var(--brand-accent);
+}
+
+.social-icon {
+    color: var(--text-secondary);
+    transition: color 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+    color: var(--text-primary);
+}
+
+/* ===== RESPONSIVE: MOBILE (≤ 576px) ===== */
+@media (max-width: 576px) {
+    .app-footer {
+        padding: 1rem !important;
+        text-align: center;
+    }
+
+    .app-footer .col-md-4 {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-logo {
+        font-size: 1.25rem;
+    }
+}

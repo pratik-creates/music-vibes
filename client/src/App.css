@@ -1,0 +1,245 @@
+/* src/App.css */
+
+/* --- Global CSS Variables --- */
+:root {
+  --background-dark: #0a0a0a;
+  --background-light: #121212; 
+  --background-card: #282828;
+  --text-primary: #ffffff; 
+  --text-secondary: #a7a7a7;
+  --brand-accent: #a855f7;
+  --sidebar-width: 280px; 
+}
+
+/* --- Base HTML/Body/Root Styles for Full Height --- */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-light); 
+  color: var(--text-primary); 
+  overflow-x: hidden; 
+}
+
+/* --- Main App Wrapper --- */
+.main-app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative; 
+}
+
+/* --- App Container --- */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--background-dark);
+    color: var(--text-primary); 
+    position: relative; 
+}
+
+/* *** PLAYER PADDING *** */
+.player-padding-bottom {
+    padding-bottom: var(--player-height, 0px) !important; 
+    transition: padding-bottom 0.3s ease-out;
+}
+
+/* --- User Layout Specific Styles --- */
+.user-layout-wrapper {
+    display: flex; 
+    flex-grow: 1; 
+    width: 100%;
+}
+
+.user-content-and-footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    min-height: 100vh;
+    margin-left: var(--sidebar-width); 
+    box-sizing: border-box; 
+}
+
+.main-content-area { 
+    flex-grow: 1; 
+    overflow-y: auto;
+    padding: 1.5rem; 
+    max-width: 100%; 
+    box-sizing: border-box;
+}
+
+/* --- Admin Layout Specific Styles --- */
+.admin-page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.admin-main-layout-content {
+    background-color: var(--background-dark);
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-main-content {
+    background-color: var(--background-dark);
+    padding: 20px; 
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* Admin header */
+.admin-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* --- Player Component Styling (Positioning) --- */
+.player-container { 
+    position: fixed; 
+    bottom: 0;
+    left: var(--sidebar-width); /* Start after the sidebar on desktop */
+    width: calc(100% - var(--sidebar-width)); /* Only span the content area */
+    height: var(--player-height, 90px);
+    background-color: var(--background-light);
+    border-top: 1px solid var(--background-card);
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem; 
+    box-sizing: border-box;
+    transition: height 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out; 
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Footer Styling --- */
+.app-footer {
+    background-color: #000; 
+    border-top: 1px solid var(--background-card);
+    flex-shrink: 0; 
+    width: 100%; 
+    padding: 1.5rem; 
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.social-icon {
+    color: var(--text-secondary);
+    transition: color 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+    color: var(--text-primary);
+}
+
+/* ===== RESPONSIVE: TABLET (≤ 991px) ===== */
+@media (max-width: 991px) {
+    :root {
+        --sidebar-width: 0px;
+    }
+
+    .user-content-and-footer-wrapper {
+        margin-left: 0;
+    }
+
+    /* Player spans full width on mobile (sidebar is hidden) */
+    .player-container {
+        left: 0;
+        width: 100%;
+    }
+
+    /* Normal padding — topbar handles the top spacing */
+    .main-content-area {
+        padding: 1rem;
+    }
+
+    .admin-main-content {
+        padding: 1rem;
+        padding-top: 1rem;
+    }
+
+    .admin-header {
+        padding-left: 3.5rem !important;
+    }
+
+    .admin-page-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* ===== RESPONSIVE: MOBILE (≤ 576px) ===== */
+@media (max-width: 576px) {
+    .main-content-area {
+        padding: 0.75rem;
+    }
+
+    .admin-main-content {
+        padding: 0.75rem;
+    }
+
+    .player-container {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* ===== MOBILE TOP NAVBAR (user side only) ===== */
+/* Hidden on desktop — shown on mobile via media query */
+.mobile-topbar {
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+    height: 54px;
+    min-height: 54px;
+    background-color: #000000;
+    border-bottom: 1px solid #282828;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.mobile-topbar-hamburger {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    line-height: 1;
+    transition: background-color 0.2s;
+}
+.mobile-topbar-hamburger:hover { background-color: #282828; }
+
+.mobile-topbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 1;
+}
+.mobile-topbar-brand .brand-accent { color: #a855f7; }
+
+@media (max-width: 991px) {
+    .mobile-topbar {
+        display: flex;
+    }
+}
