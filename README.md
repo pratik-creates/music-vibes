@@ -21,22 +21,6 @@ React.js • Node.js • Express.js • MongoDB • JavaScript • CSS3
 
 ---
 
-## 📸 Screenshots
-
-### 🏠 Home Page
-![Home Page](./screenshots/home.png)
-
-### 🔍 Search Feature
-![Search](./screenshots/search.png)
-
-### ⬆ Upload Page
-![Upload](./screenshots/upload.png)
-
-### 📱 Responsive Design
-![Responsive](./screenshots/responsive.png)
-
----
-
 ## 📄 Documentation
 
 Detailed project documentation and additional screenshots are included in the repository.
@@ -47,8 +31,28 @@ Detailed project documentation and additional screenshots are included in the re
 
 Sensitive configuration files and private modules are excluded from the public repository for security purposes.
 
----
 
 ## 👨‍💻 Author
 
 Pratik Creates
+
+---
+
+## 📸 Screenshots
+
+###  Home Preview
+![Home](./screenshots/home-preview.png)
+
+###  Search Section
+![Search](./screenshots/search-section.png)
+
+###  Upload Section
+![Upload](./screenshots/upload-section.png)
+
+###  Responsive Section
+![Responsive](./screenshots/responsives-section.png)
+
+---
+
+
+---
