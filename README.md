@@ -44,13 +44,13 @@ Pratik Creates
 ![Home](./screenshot/home-preview.png)
 
 ###  Search Section
-![Search](./screenshot/search-section.png)
+![Search](./screenshot/search-section.PNG)
 
 ###  Upload Section
-![Upload](./screenshot/upload-section.png)
+![Upload](./screenshot/upload-section.PNG)
 
 ###  Responsive Section
-![Responsive](./screenshot/responsives-section.png)
+![Responsive](./screenshot/responsive-section.PNG)
 
 ---
 
